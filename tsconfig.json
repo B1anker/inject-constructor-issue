@@ -1,15 +1,29 @@
 {
   "compilerOptions": {
+    "target": "es2018",
     "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["dom", "esnext"],
     "declaration": true,
+    "noImplicitAny": false,
     "removeComments": true,
+    "noLib": false,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
-  }
+    "paths": {
+      "@/*": ["./src/*"],
+      "src": ["./src"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
